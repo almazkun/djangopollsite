@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}Обучение в Корее{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    </head>
+
+    <body>
+
+        <div id="navigation" class="bg-danger text-white sticky-top">
+            <nav class="container navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand text-chicle" href="#">Web developer</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">-></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">|</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><-</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <header>
+            <div class="bg-danger p-1">
+
+                <h1 class="container display-4 text-chicle text-light">WEB DEVELOPER</h1>
+
+            </div>
+        </header>
+
+        <main style="min-height: 60vh;" class="container my-2">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer class="small bg-dark text-white">
+            <div class="container">
+
+                <div class="row py-4">
+                    <div class="col-sm-4">
+                        <h5>Компания</h5>
+
+                        <p>О нас</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h5>Услуги</h5>
+                        <p>Web development</p>
+                        <p>Python developer</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h6>Контакты</h6>
+                        <p>almaz.kun@gmail.com</p>
+                    </div>
+
+                </div>
+
+                <a class="text-white" href="#top"><div class="btn btn-block"><i class="fas fa-chevron-up"></i></div></a>
+            </div>
+        </footer>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
