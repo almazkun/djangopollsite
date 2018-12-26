@@ -1,8 +1,8 @@
-import os
-import dj_database_url
+import os, dj_database_url
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
 ]
 
@@ -95,10 +96,21 @@ USE_L10N = True
 USE_TZ = True
 
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 STATIC_URL = '/static/'
+
+
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, 'static'),
+]
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 db_from_env = dj_database_url.config(conn_max_age=500)
