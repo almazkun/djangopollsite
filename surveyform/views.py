@@ -1,5 +1,5 @@
-from django.views import generic
+from django.shortcuts import render
 
 
-class IndexView(generic.ListView):
-    template_name = 'surveyform/survey_form.html'
+def index(request):
+    return render(request, "survey_form.html")

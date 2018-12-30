@@ -1,8 +1,8 @@
 from django.urls import path
 
-from . import views
+from surveyform import views
 
 app_name = 'surveyform'
 urlpatterns = [
-    path('sf/', views.IndexView.as_view(), name='survey_form')
+    path('', views.index, name='index'),
 ]
