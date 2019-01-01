@@ -4,17 +4,28 @@
 {% block content %}
 <main style="min-height:70vh; margin-top:2em; margin-bottom:2em;">
 
-    <div class="container">
-
+    <div class="container jumbotron-fluid">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">This is Survey From project for FreeCodeCamp.org curriculum</p>
         <div class="col-md-6">
 
             <form id="survey-form" action="#">
-                First name:<br/>
-                <input id="name"><br/>
+                <label id="name-label" for="name">Your name:</label><br>
+                <input id="name" placeholder="Please, enter your name" required><br/>
 
+                <label id="email-label" for="email">E-mail:</label><br>
+                <input type="email" id="email" placeholder="myname123@mail.xyz" required><br/>
 
+                <label id="number-label" for="number">Number:</label><br>
+                <input type="number" id="number" min="1" max="10" placeholder="Enter your number from 1 to 10" required><br/>
+
+                <select id="dropdown" name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
             </form>
-
         </div>
 
     </div>
