@@ -2,29 +2,47 @@
 
 
 {% block content %}
-<main style="min-height:70vh; margin-top:2em; margin-bottom:2em;">
+<main>
 
-    <div class="container jumbotron-fluid">
+    <div class="container jumbotron bg-light">
         <h1 id="title">Survey Form</h1>
         <p id="description">This is Survey From project for FreeCodeCamp.org curriculum</p>
         <div class="col-md-6">
 
             <form id="survey-form" action="#">
-                <label id="name-label" for="name">Your name:</label><br>
+                <label id="name-label" for="name">Your name:</label><br/>
                 <input id="name" placeholder="Please, enter your name" required><br/>
 
-                <label id="email-label" for="email">E-mail:</label><br>
+                <label id="email-label" for="email">E-mail:</label><br/>
                 <input type="email" id="email" placeholder="myname123@mail.xyz" required><br/>
 
                 <label id="number-label" for="number">Number:</label><br>
                 <input type="number" id="number" min="1" max="10" placeholder="Enter your number from 1 to 10" required><br/>
 
+                <hr/>
                 <select id="dropdown" name="cars">
                     <option value="volvo">Volvo</option>
                     <option value="saab">Saab</option>
                     <option value="fiat">Fiat</option>
                     <option value="audi">Audi</option>
-                </select>
+                </select><br/>
+
+                <hr/>
+                <input type="radio" name="gender" value="male"> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other"> Other<br>
+
+                <hr/>
+                <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+                <input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+                <input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br>
+
+                <br/>
+                <textarea rows="4" cols="50">
+                You may add additional comments here.
+                </textarea>
+
+                 <input id="submit" type="submit">
             </form>
         </div>
 
